@@ -417,6 +417,7 @@ let g:markdown_fenced_languages = [
 " :CocInstall coc-cmake
 " :CocInstall coc-lua
 " :CocInstall coc-groovy
+" :CocInstall coc-marketplace
 
 ""if empty(glob('~/.vim/autoload/plug.vim'))
 ""  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
