@@ -1,7 +1,7 @@
 Config {
 
    -- appearance
-     font =         "xft:Hack:size=10:bold:antialias=true"
+     font =         "xft:Mononoki nerd fort:size=10:bold:antialias=true"
    , bgColor =      "#aa282A36"
    , fgColor =      "#F8F8F2"
    , position =     Top
