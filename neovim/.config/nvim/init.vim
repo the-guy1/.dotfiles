@@ -47,10 +47,18 @@ Plug 'tpope/vim-surround'
 Plug 'ryanoasis/vim-devicons'
 " nerdreee syntax highlighting
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" These are for Git intergration
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+
 call plug#end()
 
 
 " give mouse support
+" This bugged me too much
 " set mouse=a
 " Turn on syntax highlighting
 
@@ -179,6 +187,30 @@ let g:lightline = {
 
 " Always show statusline
 set laststatus=2
+
+" For signify
+" Change these if you want
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '~'
+
+" I find the numbers disctracting
+let g:signify_sign_show_count = 0
+let g:signify_sign_show_text = 1
+
+
+" Jump though hunks
+nmap <leader>gj <plug>(signify-next-hunk)
+nmap <leader>gk <plug>(signify-prev-hunk)
+nmap <leader>gJ 9999<leader>gJ
+nmap <leader>gK 9999<leader>gk
+
+
+" If you like colors instead
+" highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
+" highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
+" highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
