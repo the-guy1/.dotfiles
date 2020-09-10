@@ -66,6 +66,13 @@ Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
 " Vim start screen
 Plug 'mhinz/vim-startify'
+" Float access programs that are outide vim
+Plug 'voldikss/vim-floaterm'
+
+" Fuzzy findter
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 call plug#end()
 
 
@@ -451,7 +458,8 @@ let g:markdown_fenced_languages = [
 " https://www.npmjs.com/package/coc-spell-checker
 "
 " main codes
-" :CocInstall coc-spell-checker
+" :CocInstall coc-spell-checker "Ugly temp uninstalled it while looking for
+" better one"
 " :CocInstall coc-python
 " :CocInstall coc-css
 " :CocInstall coc-html
@@ -598,4 +606,118 @@ let g:startify_lists = [
           \ { 'type': 'sessions',  'header': ['   Sessions']       },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
+
+" Fleatterm
+let g:floaterm_keymap_toggle = '<F1>'
+let g:floaterm_keymap_next   = '<F2>'
+let g:floaterm_keymap_prev   = '<F3>'
+let g:floaterm_keymap_new    = '<F4>'
+
+" Floaterm
+let g:floaterm_gitcommit='floaterm'
+let g:floaterm_autoinsert=1
+let g:floaterm_width=0.8
+let g:floaterm_height=0.8
+let g:floaterm_wintitle=0
+let g:floaterm_autoclose=1
+
+" Floaterm WhichKey connection
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'n' : [':FloatermNew node'                              , 'node'],
+      \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
+      \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      \ }
+
+" fzf aka the fuzzy finder
+" THese are programs to install to make sure the program is running fully
+" sudo pacman -Sy fzf ripgrep the_silver_searcher fd
+" yay -S universal-ctags-git
+" " This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+map <C-f> :Files<CR>
+map <leader>b :Buffers<CR>
+nnoremap <leader>g :Rg<CR>
+nnoremap <leader>t :Tags<CR>
+nnoremap <leader>m :Marks<CR>
+
+
+let g:fzf_tags_command = 'ctags -R'
+" Border color
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+let $FZF_DEFAULT_COMMAND="rg --files --hidden"
+
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+"Get Files
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+
+" Get text in files with Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+" Ripgrep advanced
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+" Git grep
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep --line-number '.shellescape(<q-args>), 0,
+  \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
+
+
+" Python and node support
+
+let g:python3_host_prog = expand("<path to python with pynvim installed>")
+let g:python3_host_prog = expand("~/.miniconda/envs/neovim/bin/python3.8") " <- example
+
+let g:node_host_prog = expand("<path to node with neovim installed>")
+let g:node_host_prog = expand("~/.nvm/versions/node/v12.16.1/bin/neovim-node-host") " <- example
 
