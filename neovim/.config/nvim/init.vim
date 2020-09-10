@@ -1,12 +1,14 @@
 " Don't try to be vi compatible
 set nocompatible
 
-" Helps force plugins to load correctly when it is turned back on below
+" Set Leader key
+let g:mapleader = "\<Space>"
+
+"Helps force plugins to load correctly when it is turned back on below
 " filetype off
 filetype plugin on
 " keep 5 lines from the top or bottom showing
 set scrolloff=5
-" TODO: Load plugins here (pathogen or vundle)
 
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -27,8 +29,10 @@ Plug 'ap/vim-css-color'
 "Better Syntex Highlighting
 Plug 'sheerun/vim-polyglot'
 "Install lightline
-Plug 'itchyny/lightline.vim'
-" comment and uncomment block
+" Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"  comment and uncomment block
 Plug 'preservim/nerdcommenter'
 " Auto complete
 " Plug 'neoclide/coc.nvim', {'branch': 'relese'}
@@ -38,7 +42,7 @@ Plug 'dracula/vim',{'as':'dracula'}
 " Auto pairs up open and close Brakets
 Plug 'jiangmiao/auto-pairs'
 " Vifm file manager plugin
-Plug 'vifm/vifm.vim'
+" Plug 'vifm/vifm.vim'
 " Vim wiki
 Plug 'vimwiki/vimwiki'
 " Change the surrounding marks
@@ -57,6 +61,11 @@ Plug 'junegunn/gv.vim'
 " install which key to see key commands and promps
 Plug 'liuchengxu/vim-which-key'
 
+" Ranger Plugin
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+" Vim start screen
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 
@@ -535,4 +544,58 @@ let g:which_key_map.s = {
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
+
+" AitLine
+" enable tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+
+" enable powerline fonts
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
+" Switch to your current theme
+let g:airline_theme = 'dracula'
+
+" Always show tabs
+set showtabline=2
+
+" We don't need to see things like -- INSERT -- anymore
+set noshowmode
+
+" Make Ranger replace netrw and be the file explorer
+let g:rnvimr_ex_enable = 1
+
+nmap <space>r :RnvimrToggle<CR>
+" Add these
+" yay -S python-ueberzug-git
+" git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+"
+"
+" Startify configs
+let g:startify_session_dir = '~/.config/nvim/session'
+let g:startify_session_autoload = 1
+let g:startify_session_delete_buffers = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_fortune_use_unicode = 1
+let g:startify_session_persistence = 1
+let g:startify_enable_special = 0
+
+let g:startify_bookmarks = [
+            \ { 'b': '~/.config/bspwm/bspwmrc' },
+            \ { 'n': '~/.config/nvim/init.vim' },
+            \ { 'z': '~/.zshrc' },
+            \ '~/.config',
+            \ ]
+
+let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   Files']            },
+          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ ]
 
