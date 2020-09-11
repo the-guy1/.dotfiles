@@ -14,7 +14,8 @@ ZSH_THEME="dracula"
 EDITOR='nvim'
 
 # auto launch when terminal is opened
-neofetch
+# neofetch
+pfetch
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
