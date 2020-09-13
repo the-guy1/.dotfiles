@@ -17,6 +17,9 @@ super + Escape
 #
 # bspwm hotkeys
 #
+# lockscreen
+super + shift + l
+    betterlockscreen -l blur
 
 # quit/restart bspwm
 super + alt + {q,r}
