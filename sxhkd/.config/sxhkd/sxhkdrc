@@ -19,7 +19,7 @@ super + Escape
 #
 # lockscreen
 super + shift + l
-    betterlockscreen -l blur
+    betterlockscreen -l
 
 # quit/restart bspwm
 super + alt + {q,r}

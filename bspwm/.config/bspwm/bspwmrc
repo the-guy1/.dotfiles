@@ -2,6 +2,7 @@
 
 bspc rule -r "*"
 
+nordvpn connect &
 pamac-tray &
 xrdb ~/.Xresources &
 sxhkd &
@@ -10,8 +11,7 @@ dropbox &
 picom --config ~/.config/picom.conf &
 # volumeicon &
 blueman-tray &
-caffeine-indicator &
-nordvpn connect &
+caffeine &
 ~/.config/polybar/launch.sh &
 sleep 1 && /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
