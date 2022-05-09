@@ -159,6 +159,9 @@ Plug 'tpope/vim-surround'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tiagofumo/vim-nerdtree-syntax-highligh t'
 
+" LaTeX
+Plug 'vim-latex/vim-latex'
+
 call plug#end()
 
 nnoremap <leader>n :NERDTreeFocus<CR>

@@ -1,3 +1,11 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+pfetch | lolcat
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -6,7 +14,7 @@ export ZSH="/home/ken/.oh-my-zsh"
 export TERM="xterm-256color"                      # getting proper colors
 
 ### "nvim" as manpager
-export MANPAGER="nvim -c 'set ft=man' -"
+# export MANPAGER="nvim -c 'set ft=man' -"
 
 ### CHANGE TITLE OF TERMINALS
 case ${TERM} in
@@ -85,7 +93,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -210,7 +218,6 @@ alias merge='xrdb -merge ~/.Xresources'
 
 alias life="echo 'Is this real life?' | cowsay -n | cowsay -n | cowsay -n | cowsay -n | lolcat"
 
-pfetch | lolcat
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
