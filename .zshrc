@@ -147,7 +147,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-exprt PATH=~/.local/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
 # User configuration
 

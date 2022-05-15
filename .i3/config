@@ -296,6 +296,7 @@ exec --no-startup-id picom
 exec --no-startup-id caffeine
 exec --no-startup-id i3-battery-popup
 exec --no-startup-id redshift
+exec --no-startup-id solaar -w hide
 
 # Autotiling
 exec --no-startup-id autotiling
