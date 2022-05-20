@@ -177,6 +177,7 @@ export PATH=~/.local/bin:$PATH
 
 # Custome PATHS
 export PATH="$HOME/.emacs.d/bin:$PATH"
+# export PATH="/usr/lib/rustlib/src/rust"
 
 ## Chage defult editor
 export EDITOR='nvim'
