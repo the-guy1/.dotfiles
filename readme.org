@@ -3,3 +3,6 @@
 
 * My Dotfiles
 This is my dot files
+
+---
+I use stow to create simlinks with the actual config files.
