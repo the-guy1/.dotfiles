@@ -13,6 +13,10 @@ super + Return
 super + @space
   	dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4'     -sf '#F8F8F2' -fn 'Monoid Nerd Font-10' -p 'dmenu%'
 
+# launch Emacs
+super + e
+  emacsclient -c -a 'emacs'
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
