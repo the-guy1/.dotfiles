@@ -16,6 +16,7 @@ set noshowmode
 
 " my neovim config file
 
+
 " set leader key
 let g:mapleader = "\<Space>"
 
@@ -264,6 +265,10 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+
+colorscheme dracula
+
 
 " start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif

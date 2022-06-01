@@ -221,7 +221,6 @@ alias merge='xrdb -merge ~/.Xresources'
 
 alias life="echo 'Is this real life?' | cowsay -n | cowsay -n | cowsay -n | cowsay -n | lolcat"
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # source 
