@@ -1,5 +1,8 @@
-#+title: Readme
+#+title: Redeem
 
+#+CAPTION: My header file
+#+NAME: header
+[[./.config/header.png]]
 
 * My Dotfiles
 This is my dot files
