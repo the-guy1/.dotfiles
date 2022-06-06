@@ -30,3 +30,7 @@ These are here mainly so if I need to reinstall my operating system or my entire
   my terminal based file manager
 - sxhkd
   keyboard shortcuts for bspwm
+- reddhift
+  for adjusting bluelight during the evenings
+- betterlockscreen
+- picom
