@@ -8,3 +8,25 @@ This is my dot files
 I use stow to create simlinks with the actual config files.
 
 These are here mainly so if I need to reinstall my operating system or my entire computer.
+
+---
+* These are my files
+- Xresources
+- zsh
+- xmonad & xmobar
+    I don't use xmonad but I might want to at some time
+- paru
+    My AUR helper
+- i3
+    This is my actual Window manager
+- alacritty
+- awesome bspwm and qtile
+    these are Window managers that I want to try sometime
+- dunst
+- neofetch
+- neovim
+  I mainly use emacs but I still like to maintain and occasionally use neovim
+- ranger
+  my terminal based file manager
+- sxhkd
+  keyboard shortcuts for bspwm
