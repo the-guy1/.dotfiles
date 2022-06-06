@@ -189,7 +189,7 @@ export VISUAL='nvim'
 alias doas="doas --"
 alias vim="nvim"
 alias v="/bin/vim"
-alias cat='bat'
+alias cat='bat -p'
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
