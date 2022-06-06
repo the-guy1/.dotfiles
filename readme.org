@@ -6,3 +6,5 @@ This is my dot files
 
 ---
 I use stow to create simlinks with the actual config files.
+
+These are here mainly so if I need to reinstall my operating system or my entire computer.
