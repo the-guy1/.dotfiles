@@ -158,7 +158,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround' 
 Plug 'Chiel92/vim-autoformat'
-Plug 'tiagofumo/vim-nerdtree-syntax-highligh t'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " LaTeX
 Plug 'vim-latex/vim-latex'
