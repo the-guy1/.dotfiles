@@ -29,7 +29,7 @@ These are here mainly so if I need to reinstall my operating system or my entire
 - dunst
 - neofetch
 - neovim
-  I mainly use emacs but I still like to maintain and occasionally use neovim
+  I mainly use emacs but I still like to maintain and occasionally use neovim. Mainly when I am already in the terminal so I can still remember all of the shortcuts because vi/vim/neovim is on most linux computers as well as OSX and sooner or latter you might need to use it.
 - ranger
   my terminal based file manager
 - sxhkd
