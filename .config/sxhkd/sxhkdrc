@@ -11,7 +11,7 @@ super + Return
 
 # program launcher
 super + @space
-  	dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4'     -sf '#F8F8F2' -fn 'Monoid Nerd Font-10' -p 'dmenu%'
+  	dmenu_run -p 'dmenu%'
 
 # launch Emacs
 super + e
