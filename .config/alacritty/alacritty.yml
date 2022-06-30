@@ -401,7 +401,7 @@ colors: *Dracula
 # window.opacity: 0.75
 
 window:
-  opacity: 0.05
+  opacity: 0.55
 
 #selection:
   # This string contains all characters that are used as separators for

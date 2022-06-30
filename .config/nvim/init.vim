@@ -163,6 +163,11 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " LaTeX
 Plug 'vim-latex/vim-latex'
 
+" transparency
+" Plug 'kvrohit/substrata.nvim', { 'branch': 'transparency-support' }
+" Plug 'xiyaowong/nvim-transparent'
+Plug 'tribela/vim-transparent'
+
 call plug#end()
 
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -268,7 +273,6 @@ nnoremap <A-l> <C-w>l
 
 
 colorscheme dracula
-
 
 " start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
