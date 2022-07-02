@@ -1,17 +1,31 @@
+#+TITLE: My README for Alacritty
+#+AUTHOR: Kenneth Lawson
+#+PROPERTY: header-args :tangle alacritty.yml
+#+auto_tangle: t
+#+STARTUP: showeverything
+
+* Table of Contents :TOC:
+
+* Description
+This is my alacritty config this is my main terminal program
+I like it becasue it will auto update in real time while you are making changes.
+* TODO Screenshots
+
+* Config files
+
+** Imports
+This is to import external configuration files that are used in alacritty
+#+begin_src yaml
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
 #  - /path/to/alacritty.yml
   - ~/.config/alacritty/dracula.yml
+#+end_src
 
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
-
-# Import additional configuration files
-#
-# Imports are loaded in order, skipping all missing files, with the importing
-# file being loaded last. If a field is already present in a previous import, it
-# will be replaced.
-#
+** Env + Term
+This sets the environmental variables terminal color settings
+#+begin_src yaml
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -23,6 +37,10 @@ env:
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
+#+end_src
+
+** TODO Unsorted
+#+begin_src yaml
 
 window:
   # Window dimensions (changes require restart)
@@ -849,3 +867,6 @@ window:
 
   # Print all received window events.
   #print_events: false
+
+
+#+end_src
