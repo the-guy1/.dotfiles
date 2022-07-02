@@ -1,7 +1,6 @@
 #+TITLE: My README for Alacritty
 #+AUTHOR: Kenneth Lawson
 #+PROPERTY: header-args :tangle alacritty.yml
-#+auto_tangle: t
 #+STARTUP: showeverything
 
 * Table of Contents :toc:
