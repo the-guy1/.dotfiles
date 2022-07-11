@@ -8,8 +8,10 @@
 - [[#screen-shots][Screen Shots]]
 - [[#config][Config]]
   - [[#setup][Setup]]
+  - [[#monitor-and-workspaces][Monitor and workspaces]]
 
 * About config
+This is a Window manager that is completely controlled by shell commands which means that it is very basic but customizeable
 
 * Screen Shots
 
@@ -22,11 +24,17 @@ This is for setting up the shell script used for bspwm
 
 #+end_src
 
+** Monitor and workspaces
+This is where I tell bspwm what monitor gets which workspaces but since this is a laptop I only use one monitor they only go on the one
+#+begin_src sh
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+#+end_src
+
 
 #+begin_src sh
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
 bspc config window_gap          1

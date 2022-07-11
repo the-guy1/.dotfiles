@@ -1,3 +1,23 @@
+#+title: XMonad readme and Readme
+#+AUTHOR: Kenneth Lawson
+#+PROPERTY: header-args :tangle xmonad.hs
+#+STARTUP: showeverything
+
+
+* Table of Contents :TOC:
+- [[#about-config][About Config]]
+- [[#screen-shots][Screen shots]]
+- [[#imports][Imports]]
+- [[#variables][Variables]]
+- [[#main][MAIN]]
+
+* About Config
+
+* Screen shots
+
+* Imports
+These are the Haskell modules that XMonad needs
+#+begin_src haskell
 -- Base
 import XMonad
 import System.Directory
@@ -8,7 +28,11 @@ import qualified XMonad.StackSet as W
 --Utils
 import XMonad.Util.SpawnOnce
 import XMonad.Util.EZConfig (additionalKeysP, mkNamedKeymap)
+#+end_src
 
+* Variables
+variables that will be used for the rest of the configuration file
+#+begin_src haskell
 --myFont :: String
 --myFont = "xft:FiraCode Nerd Font Mono:regular:size=9:antialias=true:hinting=true"
 
@@ -30,7 +54,9 @@ myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
 
 myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows
+#+end_src
 
+#+begin_src haskell
 myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "picom"
@@ -39,7 +65,11 @@ myStartupHook = do
   spawn "/usr/bin/emacs --daemon"
 
   setWName LG3D
+#+end_src
 
+* MAIN
+This is were all of this code actually gets ran
+#+begin_src haskell
 main :: IO ()
 main = do
 
@@ -48,3 +78,5 @@ main = do
        , modMask            = myModMask
     , terminal           = myTerminal
     , startupHook        = myStartupHook
+
+#+end_src
