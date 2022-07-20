@@ -9,6 +9,7 @@
 - [[#config][Config]]
   - [[#setup][Setup]]
   - [[#monitor-and-workspaces][Monitor and workspaces]]
+  - [[#sxhkd][SXHKD]]
 
 * About config
 This is a Window manager that is completely controlled by shell commands which means that it is very basic but customizeable
@@ -18,7 +19,7 @@ This is a Window manager that is completely controlled by shell commands which m
 * Config
 
 ** Setup
-This is for setting up the shell script used for bspwm
+This is for setting up the shell script used for bspwm. This says that the script is written in shell script
 #+begin_src sh
 #! /bin/sh
 
@@ -28,12 +29,15 @@ This is for setting up the shell script used for bspwm
 This is where I tell bspwm what monitor gets which workspaces but since this is a laptop I only use one monitor they only go on the one
 #+begin_src sh
 bspc monitor -d I II III IV V VI VII VIII IX X
-
 #+end_src
 
+** SXHKD
+This is important because it is what is used for keyboard shortcuts
+#+begin_src sh
+pgrep -x sxhkd > /dev/null ||sxhkd &
+#+end_src
 
 #+begin_src sh
-pgrep -x sxhkd > /dev/null || sxhkd &
 
 
 bspc config border_width         2

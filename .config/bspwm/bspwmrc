@@ -1,8 +1,8 @@
 #! /bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
-
 bspc monitor -d I II III IV V VI VII VIII IX X
+
+pgrep -x sxhkd > /dev/null ||sxhkd &
 
 bspc config border_width         2
 bspc config window_gap          1
