@@ -24,12 +24,12 @@ for _, server in pairs(servers) do
 end
 
 
--- Spelling setup
-require('cmp').setup {
-  sources = {
-    { name = 'spell' }
-  }
-}
+---- Spelling setup
+-- require('cmp').setup {
+--  sources = {
+--    { name = 'spell' }
+--  }
+--}
 
 vim.opt.spell = true
 vim.opt.spelllang = { 'en_us' }
