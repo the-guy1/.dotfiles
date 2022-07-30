@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use {'dracula/vim', as = 'dracula'}
 
 	-- cmp plugins
-	use "hrsh7th/nvim-cmp" -- The completion plugin
+	-- use "hrsh7th/nvim-cmp" -- The completion plugin
 	use "hrsh7th/cmp-buffer" -- buffer completions
 	use "hrsh7th/cmp-path" -- path completions
 	use "saadparwaiz1/cmp_luasnip"-- snippet completions
@@ -87,6 +87,18 @@ return packer.startup(function(use)
 	use "neovim/nvim-lspconfig"         -- enable LSP
 	use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 	use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "f3fora/cmp-spell"                -- Spelling
+
+  -- Complex Charecters for LaTeX
+  use({
+  "hrsh7th/nvim-cmp",
+  requires = {
+    { "kdheepak/cmp-latex-symbols" },
+  },
+  sources = {
+    { name = "latex_symbols" },
+  },
+})
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"

@@ -22,3 +22,14 @@ for _, server in pairs(servers) do
 	end
 	lspconfig[server].setup(opts)
 end
+
+
+-- Spelling setup
+require('cmp').setup {
+  sources = {
+    { name = 'spell' }
+  }
+}
+
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
