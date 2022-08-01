@@ -69,6 +69,15 @@ fi
 
 IFS=$SAVEIFS
 
+# Repos for new installs
+# requires Oh-My-Zsh
+# https://ohmyz.sh/
+# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+#
+# If using Arch download these two fron the AUR they are sourced at the bottom of this file
+# https://github.com/zsh-users/zsh-autosuggestions
+# https://github.com/zsh-users/zsh-syntax-highlighting
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -181,13 +190,14 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 
 ## Chage defult editor
 export EDITOR='nvim'
-export VISUAL='nvim'
+export VISUAL='emacs'
 
 ### ALIASES ###
 
 # root privileges
 alias doas="doas --"
 alias vim="nvim"
+alias n="nvim"
 alias v="/bin/vim"
 alias cat='bat -p'
 # Changing "ls" to "exa"

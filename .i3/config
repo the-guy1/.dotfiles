@@ -373,8 +373,8 @@ set_from_resource $term_color15    color15
 # }
 
 bar {
-	status_command /home/ken/.config/bumblebee-status/bumblebee-status -m cpu memory redshift battery datetime \
-		pasink -p time.format="%H:%M" -t dracula-powerline
+	status_command /home/ken/.config/bumblebee-status/bumblebee-status -m cpu memory redshift playerctl battery datetime \
+		pasink -p time.format="%H:%M" -t dracula-powerline  
 #        position top
 }
 

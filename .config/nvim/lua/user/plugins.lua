@@ -63,6 +63,7 @@ return packer.startup(function(use)
 	use "folke/tokyonight.nvim"
 	use "lunarvim/darkplus.nvim"
   use {'dracula/vim', as = 'dracula'}
+  use "dunstontc/vim-vscode-theme"
 
 	-- cmp plugins
 	-- use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -109,6 +110,7 @@ return packer.startup(function(use)
 	-- Treesitter
 	use "nvim-treesitter/nvim-treesitter"
 
+  use "p00f/nvim-ts-rainbow"
 	-- Git
 	use "lewis6991/gitsigns.nvim"
 
