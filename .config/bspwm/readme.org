@@ -10,7 +10,7 @@
   - [[#setup][Setup]]
   - [[#monitor-and-workspaces][Monitor and workspaces]]
   - [[#sxhkd][SXHKD]]
-  -   [[#bspwm-rules][bspwm rules]]
+  - [[#bspwm-rules][bspwm rules]]
   - [[#colors][Colors]]
   - [[#auto-run][Auto run]]
 
@@ -32,15 +32,17 @@ This is for setting up the shell script used for bspwm. This says that the scrip
 This is where I tell bspwm what monitor gets which workspaces but since this is a laptop I only use one monitor they only go on the one
 #+begin_src sh
 bspc monitor -d I II III IV V VI VII VIII IX X
+
 #+end_src
 
 ** SXHKD
 This is important because it is what is used for keyboard shortcuts
 #+begin_src sh
 pgrep -x sxhkd > /dev/null ||sxhkd &
+
 #+end_src
 
-**   bspwm rules
+** bspwm rules
 These are some of the rules that bspwm needs to have to run properly
 #+begin_src sh
 bspc config border_width         2
@@ -77,13 +79,12 @@ bspc config focused_border_color "#8be9fd"
 
 ** Auto run
 My autorun programs
-#+begin_src sh
-~/.config/polybar/launch.sh &
+#+begin_src s
 /usr/bin/emacs --daemon &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # nitrogen --restore &
-feh --bg-scale ~/.config/Kraken.png &
-picom --experimental-backend --config ~/.config/picom.conf &
+feh --bg-scale ~/.dotfiles/.config/Kraken.png &
+picom &
 dunst &
 blueman-applet &
 redshift &
@@ -94,4 +95,6 @@ xautolock -time 15 -locker blurlock &
 dropbox &
 /opt/piavpn/bin/pia-client &
 solaar -w hide &
+~/.config/polybar/launch.sh &
+
 #+end_src
