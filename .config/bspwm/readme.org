@@ -36,7 +36,7 @@ bspc monitor -d I II III IV V VI VII VIII IX X
 #+end_src
 
 ** SXHKD
-This is important because it is what is used for keyboard shortcuts
+This is important because it is used for keyboard shortcuts because bspwm doesn't have its our keyboard shortcut program and so you cannot open anything withoutit.
 #+begin_src sh
 pgrep -x sxhkd > /dev/null ||sxhkd &
 
