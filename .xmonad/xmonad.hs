@@ -108,6 +108,17 @@ myStartupHook = do
   spawnOnce "nm-applet"
   spawnOnce "volumeicon"
   spawn "/usr/bin/emacs --daemon"
+  spawn "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+  spawn "feh --bg-scale ~/.config/Kraken.png"
+  spawn "xfce4-power-manager"
+  spawnOnce "pamac-tray"
+  spawm "clipit"
+  spawn "bueman-applet"
+  spawn "xautolock -time 10 -locker 'betterlockscreen -l'"
+  spawnOnce "/opt/piavpn/bin/pia-client"
+  spawnOnce "dropbox"
+  spawn "redshift"
+  spawnOnce "solaar -w hide"
 
   --setWName LG3D
 
@@ -210,7 +221,7 @@ myKeys c =
 
 main :: IO ()
 main = do
-      xmonad $ addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $ ewmh $ docks $ def
+  xmonad $ addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $ ewmh $ docks $ def
     { manageHook         = myManageHook <+> manageDocks
     , modMask            = myModMask
     , terminal           = myTerminal
