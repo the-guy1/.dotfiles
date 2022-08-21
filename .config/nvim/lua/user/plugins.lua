@@ -119,7 +119,7 @@ return packer.startup(function(use)
 
   -- live basic webserver
   use "manzeloth/live-server"
-  
+
   -- Ranger intergration
   use "francoiscabrol/ranger.vim"
   use "rbgrouleff/bclose.vim"
