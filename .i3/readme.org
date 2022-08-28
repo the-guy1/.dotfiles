@@ -7,6 +7,13 @@
 - [[#description][Description]]
 - [[#screenshots][Screenshots]]
 - [[#configuration-files][Configuration Files]]
+  - [[#setting-mod-key][Setting mod key]]
+  - [[#general-setup][General setup]]
+  - [[#font][Font]]
+  - [[#floating-windows][Floating Windows]]
+  - [[#key-keyboard-shortcuts][Key keyboard shortcuts]]
+  - [[#sound][Sound]]
+  - [[#brightness-controls][Brightness controls]]
   - [[#setup][setup]]
 
 * Description
@@ -15,13 +22,15 @@ This is my i3 file I which is a Window Manager that I enjoy. Its customisable wh
 
 * Configuration Files
 
-** setup
-
+** Setting mod key
 #+begin_src conf
-
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+#+end_src
 
+** General setup
+These are some of base configs for i3
+#+begin_src conf
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
@@ -37,58 +46,44 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+#+end_src
+
+** Font
+This set the main font that gets used for i3 and its bar
+#+begin_src conf
 font xft:FiraCode Nerd Font 10
 
+#+end_src
+
+** Floating Windows
+If you use a lot of floating windows this will allow you to move the window with your mouse
+#+begin_src conf
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# start a terminal
+#+end_src
+
+** Key keyboard shortcuts
+*** Terminal
+#+begin_src conf
+# start my terminal
 bindsym $mod+Return exec alacritty
 
+#+end_src
+*** Kill the Window
+#+begin_src conf
 # kill focused window
 bindsym $mod+Shift+q kill
 
+#+end_src
+*** Dmenu
+#+begin_src conf
 # start program launcher
 bindsym $mod+d exec --no-startup-id "dmenu_run -p 'dmenu%'"
 
-# launch categorized menu
-# bindsym $mod+z exec --no-startup-id morc_menu
-
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
-#exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
-
-################################################################################################
-
-# Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-
-# Start Applications
-# bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-
-# focus_follows_mouse no
-
+#+end_src
+*** Change and modify focus of windows
+#+begin_src conf
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -118,13 +113,69 @@ workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
-# split orientation
-bindsym $mod+z split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle;exec notify-send 'tile toggled'
+# focus_follows_mouse no
 
+#+end_src
+*** Fullscreen
+Toggle fullscreen
+#+begin_src conf
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+#+end_src
+*** Other keyboard shortcuts
+#+begin_src conf
+# Start Applications
+# bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+bindsym $mod+F2 exec firefox
+bindsym $mod+F3 exec pcmanfm
+# bindsym $mod+F3 exec ranger
+bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+t exec --no-startup-id pkill picom
+bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+bindsym Print exec --no-startup-id i3-scrot
+bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+
+#+end_src
+*** Tiling toggle
+i3 is a manual tiling window manager however I use a program that makes it an auto tiler but I keep this just in case I remove it.
+#+begin_src conf
+# split orientation
+# bindsym $mod+z split h;exec notify-send 'tile horizontally'
+# bindsym $mod+v split v;exec notify-send 'tile vertically'
+# bindsym $mod+q split toggle;exec notify-send 'tile toggled'
+
+#+end_src
+** Sound
+#+begin_src conf
+################################################################################################
+## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
+################################################################################################
+
+#exec --no-startup-id volumeicon
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+#exec --no-startup-id pulseaudio
+#exec --no-startup-id pa-applet
+bindsym $mod+Ctrl+m exec pavucontrol
+
+#+end_src
+
+** Brightness controls
+I do not currently use this however I keep it in just in case I will in the future
+#+begin_src conf
+# Screen brightness controls
+# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+
+#+end_src
+** setup
+
+#+begin_src conf
+
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -217,8 +268,6 @@ for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
