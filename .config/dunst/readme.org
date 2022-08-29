@@ -1,0 +1,5 @@
+#+title: Readme
+#+author: Kenneth Lawson
+
+* Readme for my dunst file
+There isn't much to do as this is basically the defaults with a Dracula color scheme

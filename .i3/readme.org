@@ -404,7 +404,7 @@ These are the applications that will automatically launch
 # Autostart applications
 
 # This is fore when I have my external monitor attached
-exec --no-startup-id .screenlayout/ExtMonRight.sh
+# exec --no-startup-id .screenlayout/ExtMonRight.sh
 
 # emacs daemon
 exec --no-startup-id /usr/bin/emacs --daemon

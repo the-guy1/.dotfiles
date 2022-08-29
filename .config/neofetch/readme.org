@@ -1,3 +1,18 @@
+#+title: Readme
+#+author: Kenneth Lawson
+#+property: header-args :tangle config.conf
+#+auto_tangle: t
+#+startup: showeverything
+
+* Table of Contents :toc:
+- [[#readme][readme]]
+  - [[#temp][temp]]
+
+* readme
+This is the readme file for my neofetch based off of [[/github.com/chick2d/neofetch-themes][Chick's]] config and [[https://github.com/dylanaraps/neofetch/wiki/Customizing-Info][neofetch wiki]]
+
+** temp
+#+begin_src conf
 # Source: https://github.com/chick2d/neofetch-themes
 # Configuration made by Chick
 
@@ -134,3 +149,5 @@ yoffset=0
 xoffset=0
 
 stdout="off"
+
+#+end_src
