@@ -14,7 +14,7 @@
   - [[#key-keyboard-shortcuts][Key keyboard shortcuts]]
   - [[#sound][Sound]]
   - [[#brightness-controls][Brightness controls]]
-  - [[#setup-workspaces-and-name-them][setup Workspaces and name them]]
+  - [[#setup-workspaces-and-to-name-them][setup Workspaces and to name them]]
   - [[#startup-applications][Startup Applications]]
   - [[#color-scheme-for-the-i3terminal][Color scheme for the i3terminal]]
   - [[#bar][bar]]
@@ -306,7 +306,7 @@ I do not currently use this however I keep it in just in case I will in the futu
 
 #+end_src
 
-** setup Workspaces and name them
+** setup Workspaces and to name them
 This will setup the 8 workspace as well as navigating around them
 #+begin_src conf
 # Workspace names
