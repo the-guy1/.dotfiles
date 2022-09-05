@@ -41,6 +41,9 @@ require('packer').startup(function(use)
   -- transparent
   use 'xiyaowong/nvim-transparent'
 
+  -- Org mode 
+  use 'nvim-orgmode/orgmode'
+
   if is_bootstrap then
     require('packer').sync()
   end
