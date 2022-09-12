@@ -32,11 +32,17 @@ require('packer').startup(function(use)
   -- Tokyo night color scheme
   use 'folke/tokyonight.nvim'
 
-  --Dracula color scheme
+  -- dracula color scheme
   use {'dracula/vim', as = 'dracula'}
+
+  -- catppuccin theme
+  use {'catppuccin/vim', as = 'catppuccin' }
 
   -- Onedark color scheme
   use 'joshdick/onedark.vim'
+
+  -- Jelly Beans This was the first colorscheme i used
+  use 'nanotech/jellybeans.vim'
 
   -- transparent
   use 'xiyaowong/nvim-transparent'
@@ -99,7 +105,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme dracula]]
+vim.cmd [[colorscheme tokyonight]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -135,7 +141,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'dracula',
+    theme = 'tokyonight',
     component_separators = {left = '', right = ''},
     section_separators = {left = '', right = ''},
 

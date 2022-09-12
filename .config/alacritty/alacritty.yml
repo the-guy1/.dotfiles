@@ -155,7 +155,7 @@ schemes:
 # window.opacity: 0.75
 
 window:
-  opacity: 0.75
+  opacity: 0.60
 
 #selection:
   # This string contains all characters that are used as separators for
