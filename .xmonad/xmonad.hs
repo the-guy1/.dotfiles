@@ -1,16 +1,4 @@
--- -- Base
--- import XMonad
--- import System.Directory
--- import System.IO (hClose, hPutStr, hPutStrLn)
--- import System.Exit (exitSuccess)
--- import qualified XMonad.StackSet as W
---
--- --Utils
--- import XMonad.Util.SpawnOnce
--- import XMonad.Util.EZConfig (additionalKeysP, mkNamedKeymap)
--- import XMonad.Util.NamedActions
-
-  -- Base
+    -- Base
 import XMonad
 import System.Directory
 import System.IO (hClose, hPutStr, hPutStrLn)

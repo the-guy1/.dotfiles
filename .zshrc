@@ -197,7 +197,6 @@ export VISUAL='emacs'
 # root privileges
 alias doas="doas --"
 alias vim="nvim"
-alias n="nvim"
 alias v="/bin/vim"
 alias cat='bat -p'
 # Changing "ls" to "exa"
