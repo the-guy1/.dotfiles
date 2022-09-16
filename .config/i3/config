@@ -1,41 +1,6 @@
-#+title: Readme
-#+AUTHOR: Kenneth Lawson
-#+PROPERTY: header-args :tangle config
-#+STARTUP: showeverything
-
-* Table of Contents :toc:
-- [[#description][Description]]
-- [[#screenshots][Screenshots]]
-- [[#configuration-files][Configuration Files]]
-  - [[#setting-mod-key][Setting mod key]]
-  - [[#general-setup][General setup]]
-  - [[#font][Font]]
-  - [[#floating-windows][Floating Windows]]
-  - [[#key-keyboard-shortcuts][Key keyboard shortcuts]]
-  - [[#sound][Sound]]
-  - [[#brightness-controls][Brightness controls]]
-  - [[#setup-workspaces-and-to-name-them][setup Workspaces and to name them]]
-  - [[#startup-applications][Startup Applications]]
-  - [[#color-scheme-for-the-i3terminal][Color scheme for the i3terminal]]
-  - [[#bar][bar]]
-  - [[#theme][Theme]]
-  - [[#gaps][gaps]]
-
-* Description
-This is my i3 file I which is a Window Manager that I enjoy. Its customisable while being sturdy.
-* Screenshots
-
-* Configuration Files
-
-** Setting mod key
-#+begin_src conf
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
-#+end_src
 
-** General setup
-These are some of base configs for i3
-#+begin_src conf
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
@@ -51,48 +16,20 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
-#+end_src
+font xft:Hack Nerd Font 9
 
-** Font
-This set the main font that gets used for i3 and its bar
-#+begin_src conf
-font xft:FiraCode Nerd Font 10
-
-#+end_src
-
-** Floating Windows
-If you use a lot of floating windows this will allow you to move the window with your mouse
-#+begin_src conf
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-#+end_src
-
-** Key keyboard shortcuts
-*** Terminal
-Set my terminal
-#+begin_src conf
 # start my terminal
 bindsym $mod+Return exec alacritty
 
-#+end_src
-*** Kill the Window
-To close the active application
-#+begin_src conf
 # kill focused window
 bindsym $mod+Shift+q kill
 
-#+end_src
-*** Dmenu
-open my menu
-#+begin_src conf
 # start program launcher
 bindsym $mod+d exec --no-startup-id "dmenu_run -p 'dmenu%'"
 
-#+end_src
-*** Change and modify focus of windows
-Move around my windows
-#+begin_src conf
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -124,42 +61,23 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 
 # focus_follows_mouse no
 
-#+end_src
-*** Fullscreen
-Toggle fullscreen
-#+begin_src conf
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-#+end_src
-*** Launch Emacs
-Keyboard shortcut to launch Emacs
-#+begin_src conf
 # Launch emacs client
 bindsym $mod+e exec emacsclient -c -a 'emacs'
 
-#+end_src
-*** Change layouts
-#+begin_src conf
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 #bindsym $mod+Shift+s layout toggle split
 
-#+end_src
-*** Floating
-Setup floating
-#+begin_src conf
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-#+end_src
-*** Scratchpad
-Scratchpads are amazing
-#+begin_src conf
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
@@ -167,17 +85,10 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
-#+end_src
-*** Workspace
-#+begin_src conf
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
-#+end_src
-*** Other keyboard shortcuts
-Smaller shortcuts that I don't use that often but are glad that they are there
-#+begin_src conf
 # Start Applications
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
@@ -193,29 +104,17 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
-#+end_src
-*** Tiling toggle
-i3 is a manual tiling window manager however I use a program that makes it an auto tiler but I keep this just in case I remove it.
-#+begin_src conf
 # split orientation
 # bindsym $mod+z split h;exec notify-send 'tile horizontally'
 # bindsym $mod+v split v;exec notify-send 'tile vertically'
 # bindsym $mod+q split toggle;exec notify-send 'tile toggled'
 
-#+end_src
-*** Shortcuts that I don't know what they do
-However I will not remove just in case they are important
-#+begin_src conf
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
 
-#+end_src
-*** Reload, Restart, and exit i3
-To exit or reload my i3 config
-#+begin_src conf
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -225,10 +124,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-#+end_src
-*** Shutdown and logout scripts
-This is a script that I took from the [[https://manjaro.org/download/][Manjaro i3]] config and have been using ever since
-#+begin_src conf
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (r)eboot, (Shift+s)hutdown
@@ -246,10 +141,6 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-#+end_src
-*** Resize
-This will resize windows
-#+begin_src conf
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
@@ -274,17 +165,9 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-#+end_src
-*** Toggle i3status bar
-Switch the status bar on and off
-#+begin_src conf
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
-#+end_src
-
-** Sound
-#+begin_src conf
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
@@ -295,20 +178,10 @@ bindsym $mod+m bar mode toggle
 #exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
-#+end_src
-
-** Brightness controls
-I do not currently use this however I keep it in just in case I will in the future
-#+begin_src conf
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
-#+end_src
-
-** setup Workspaces and to name them
-This will setup the 8 workspace as well as navigating around them
-#+begin_src conf
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
@@ -352,9 +225,6 @@ bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
-#+end_src
-*** Start applications in floating mode
-#+begin_src conf
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
@@ -382,10 +252,6 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
-#+end_src
-*** open applications in specific workspaces
-Will actually set this up
-#+begin_src conf
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
@@ -396,11 +262,6 @@ Will actually set this up
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
-#+end_src
-
-** Startup Applications
-These are the applications that will automatically launch
-#+begin_src conf
 # Autostart applications
 
 # This is fore when I have my external monitor attached
@@ -429,11 +290,6 @@ exec --no-startup-id solaar -w hide
 # Autotiling
 exec --no-startup-id autotiling
 
-#+end_src
-
-** Color scheme for the i3terminal
-I may not use the i3 terminal but I like having it
-#+begin_src conf
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
 # https://i3wm.org/docs/userguide.html#xresources
@@ -465,22 +321,11 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-#+end_src
-
-** bar
-*** bumblebee
-The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] config is what I use for my bar
-#+begin_src conf
 bar {
 	status_command /home/ken/.config/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
 		pasink -p time.format="%H:%M" -t dracula-powerline
 #        position top
 }
-
-#+end_src
-*** default config
-This is the base i3bar config
-#+begin_src conf
 
 # # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # bar {
@@ -522,11 +367,7 @@ This is the base i3bar config
 #     binding_mode       #FF5555 #FF5555 #F8F8F2
 #   }
 # }
-#+end_src
 
-** Theme
-This is the [[https://draculatheme.com/i3][Dracula theme]]
-#+begin_src conf
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
 #  client.focused          #556064 #556064 #80FFF9 #FDF6E3
@@ -545,10 +386,6 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 client.background       #F8F8F2
 
-#+end_src
-** gaps
-
-#+begin_src conf
 #############################
 ### settings for i3-gaps: ###
 #############################
@@ -605,5 +442,3 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-#+end_src

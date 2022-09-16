@@ -49,7 +49,7 @@ return packer.startup(function(use)
 	use({ "JoosepAlviste/nvim-ts-context-commentstring"})
 	use({ "kyazdani42/nvim-web-devicons"})
 	use({ "kyazdani42/nvim-tree.lua"})
-	use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
+	use({ "akinsho/bufferline.nvim"})
 	use({ "moll/vim-bbye"})
 	use({ "nvim-lualine/lualine.nvim"})
 	use({ "akinsho/toggleterm.nvim"})
@@ -86,9 +86,7 @@ return packer.startup(function(use)
 
 	-- Treesitter
 	use({
-		"nvim-treesitter/nvim-treesitter",
-		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
-	})
+		"nvim-treesitter/nvim-treesitter"})
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim"})
