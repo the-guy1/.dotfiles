@@ -91,17 +91,17 @@ return packer.startup(function(use)
 	use({ "lewis6991/gitsigns.nvim"})
 
 
-   -- dracula color scheme
+   -- dracula color theme
   use {'dracula/vim', as = 'dracula'}
 
   -- catppuccin theme
   use {'catppuccin/vim', as = 'catppuccin' }
 
-  -- Onedark color scheme
+  -- Onedark color theme
   use 'joshdick/onedark.vim'
 
-  -- Jelly Beans This was the first colorscheme i used
-  use 'nanotech/jellybeans.vim'
+  -- oxocarbon theme
+  use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
 
   -- transparent
   use 'xiyaowong/nvim-transparent'
