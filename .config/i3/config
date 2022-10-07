@@ -22,7 +22,7 @@ font xft:Hack Nerd Font 9
 floating_modifier $mod
 
 # start my terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
