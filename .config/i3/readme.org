@@ -52,7 +52,11 @@ bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
 #+end_src
-
+*** disable titlebar
+disable the built in titlebar
+#+begin_src conf
+new_window none
+#+end_src
 ** Font
 This set the main font that gets used for i3 and its bar
 #+begin_src conf
@@ -420,7 +424,7 @@ exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l"
 
 exec --no-startup-id /opt/piavpn/bin/pia-client
 exec --no-startup-id dropbox
-exec --no-startup-id picom
+# exec --no-startup-id picom
 exec --no-startup-id caffeine
 exec --no-startup-id i3-battery-popup
 exec --no-startup-id redshift

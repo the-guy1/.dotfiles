@@ -16,6 +16,8 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
+new_window none
+
 font xft:Hack Nerd Font 9
 
 # Use Mouse+$mod to drag floating windows
