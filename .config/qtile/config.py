@@ -4,7 +4,8 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = guess_terminal()
+# terminal = guess_terminal()
+terminal = "kitty"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -53,7 +54,8 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "d", lazy.spawn("dmenu_run"), desc="Launch dmenu"),
 ]
 
 groups = [Group(i) for i in "123456789"]
