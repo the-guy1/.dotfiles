@@ -475,11 +475,11 @@ set_from_resource $term_color15    color15
 *** bumblebee
 The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] config is what I use for my bar
 #+begin_src conf
-bar {
-	status_command /home/ken/.config/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
-		pasink -p time.format="%H:%M" -t dracula-powerline
-#        position top
-}
+ bar {
+ 	status_command /home/ken/.config/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
+ 		pasink -p time.format="%H:%M" -t dracula-powerline
+ #        position top
+ }
 
 #+end_src
 *** default config
