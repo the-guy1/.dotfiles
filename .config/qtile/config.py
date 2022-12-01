@@ -1,11 +1,16 @@
+# -*- coding: utf-8 -*-
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+from libqtile import layout, bar, widget, hook
+# from libqtile.utils import guess_terminal
+from qtile_extras import widget
+from qtile_extras.widget.decorations import BorderDecoration
 
 mod = "mod4"
 # terminal = guess_terminal()
-terminal = "kitty"
+terminal = "alacritty"
+myBrowser = "librewolf"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -56,6 +61,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "d", lazy.spawn("dmenu_run"), desc="Launch dmenu"),
+    Key([mod], "e", lazy.spawn("emacs"), desc="launch emacs"),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -175,6 +181,31 @@ auto_minimize = True
 
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
+
+
+# @hook.subscribe.startup_once
+# def start_once():
+#     home = os.path.expanduser('~')
+#     subprocess.call([home + '/.config/qtile/autostart.sh'])
+@hook.subscribe.startup_once
+def autostart():
+    lazy.spawn(/usr/bin/emacs --daemon)
+    lazy.spawn(nm-applet)
+    lazy.spawn(/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1)
+    lazy.spawn(feh --bg-scale ~/.dotfiles/.config/wallpaper.jpg)
+    lazy.spawn(xfce4-power-manager)
+    lazy.spawn(pamac-tray)
+    lazy.spawn(blueman-applet)
+    lazy.spawn(autolock -time 10 -locker "betterlockscreen -l")
+    lazy.spawn(/opt/piavpn/bin/pia-client)
+    lazy.spawn(dropbox)
+    lazy.spawn(picom)
+    lazy.spawn(caffeine)
+    lazy.spawn(redshift)
+    lazy.spawn(solaar -w hide)
+    lazy.spawn(dunst)
+
+
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the

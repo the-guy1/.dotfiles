@@ -9,7 +9,7 @@ This is my dot files
 
 ---
 [[./.config/screenshot.png]]
-I use stow to create simlinks with the actual config files.
+I use [[https://www.gnu.org/software/stow/][stow]]  to create symlinks with the actual config files.
 
 These are here mainly so if I need to reinstall my operating system or my entire computer. I do not really believe that anyone other than me would actually use these.
 
