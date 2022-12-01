@@ -477,7 +477,7 @@ The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] co
 #+begin_src conf
  bar {
  	status_command /home/ken/.config/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
- 		pasink -p time.format="%H:%M" -t dracula-powerline
+ 		pasink -p time.format="%H:%M" -t iceberg-powerline #dracula-powerline
  #        position top
  }
 
