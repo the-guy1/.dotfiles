@@ -1,4 +1,4 @@
-My Neovim congig
+My Neovim config
 ============
 
 This is a work in progress be prepared for a lot of changes because I do not like what I currently have.
