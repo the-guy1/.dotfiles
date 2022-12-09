@@ -18,3 +18,6 @@ vim.keymap.set('n' , '<leader>h', 'nohlsearch<CR>')
 
 -- relitive line number
 vim.wo.relativenumber = true
+
+-- press jk to exit insert mode
+vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })

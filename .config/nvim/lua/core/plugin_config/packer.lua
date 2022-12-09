@@ -14,7 +14,9 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
+	-- My main theme
 	use 'folke/tokyonight.nvim'
+	-- my backup theme
 	use {"dracula/vim", as = "dracula"}
 	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-tree/nvim-web-devicons'
@@ -23,9 +25,31 @@ return require('packer').startup(function(use)
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.0',
-		requires = { {'nvim-lua/plenary.nvim'}}
+		requires = { {'nvim-lua/plenary.nvim'}},
+		run = ":TSUpdate"
 	}
+	use 'nvim-lua/popup.nvim'
+	
+	-- Transparence
 	use 'xiyaowong/nvim-transparent'
+
+	-- to get better at vim
+	use 'ThePrimeagen/vim-be-good'
+
+	-- for git
+	use 'tpope/vim-fugitive'
+
+	-- Language Server Protical
+	use 'neovim/nvim-lspconfig'
+
+	-- Mason for auto installing and setting up LSP's
+	use 'williamboman/mason.nvim'
+
+	-- Debug Adater Protocol
+	use 'mfussenegger/nvim-dap'
+
+	-- Language Server Injector
+	use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

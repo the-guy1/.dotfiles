@@ -274,7 +274,7 @@ exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id nitrogen --restore; sleep 1
-exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/wall.jpg
+exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/tokyo-night36.svg
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
@@ -325,7 +325,7 @@ set_from_resource $term_color15    color15
 
  bar {
  	status_command /home/ken/.config/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
- 		pasink -p time.format="%H:%M" -t iceberg-powerline #dracula-powerline
+ 		pasink -p time.format="%H:%M" -t iceberg-rainbow #dracula-powerline
  #        position top
  }
 
