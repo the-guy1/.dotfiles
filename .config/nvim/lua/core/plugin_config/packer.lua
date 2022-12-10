@@ -51,6 +51,30 @@ return require('packer').startup(function(use)
 	-- Language Server Injector
 	use 'jose-elias-alvarez/null-ls.nvim'
 
+	-- helps with shortcuts
+	use {
+  "folke/which-key.nvim",
+  config = function()
+    require("which-key").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+
+-- lsp setup
+use 'hrsh7th/cmp-nvim-lsp'
+use 'hrsh7th/cmp-buffer'
+use 'hrsh7th/nvim-cmp'
+use 'hrsh7th/cmp-path'
+use 'hrsh7th/cmp-cmdline'
+
+use 'L3MON4D3/LuaSnip'
+use 'saadparwaiz1/cmp_luasnip'
+
+	use {'glepnir/dashboard-nvim'}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
