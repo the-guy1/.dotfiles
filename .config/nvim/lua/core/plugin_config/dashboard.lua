@@ -58,6 +58,6 @@ db.custom_center = {
 		shortcut = "SPC h t",
 	},
 }
-db.custom_footer = { "", "🎉 If I'm using Neovim, then my Emacs config must be broken!" }
+db.custom_footer = { "", "🎉 Insert something wity here!" }
 db.session_directory = "/home/ken/.config/nvim/session"
 
