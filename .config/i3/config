@@ -283,7 +283,7 @@ exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l"
 
 exec --no-startup-id /opt/piavpn/bin/pia-client
 exec --no-startup-id dropbox
-exec --no-startup-id picom
+# exec --no-startup-id picom
 exec --no-startup-id caffeine
 exec --no-startup-id i3-battery-popup
 exec --no-startup-id redshift
