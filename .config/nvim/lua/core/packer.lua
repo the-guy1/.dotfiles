@@ -29,6 +29,9 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
 
+    -- Spelling
+    use 'lewis6991/spellsitter.nvim'
+
     -- close delimintors {[("")]}
     use'Raimondi/delimitMate'
 

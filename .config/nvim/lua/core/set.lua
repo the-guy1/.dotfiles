@@ -28,4 +28,9 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+vim.api.nvim_create_autocmd(
+    { "BufRead", "BufNewFile" },
+    { pattern = { "*.txt", "*.md", "*.tex", "*.org" },
+    command = "setlocal spell" }
+)
 

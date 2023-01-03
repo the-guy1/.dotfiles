@@ -259,7 +259,7 @@ for_window [class="Xfburn"] floating enable
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
-
+assign [class="Steam"] 6
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -325,7 +325,7 @@ set_from_resource $term_color15    color15
 
  bar {
  	status_command /home/ken/.config/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
- 		pasink -p time.format="%H:%M" -t iceberg-rainbow #dracula-powerline
+ 		pasink -p time.format="%H:%M" -t greyish-powerline #dracula-powerline
  #        position top
  }
 
