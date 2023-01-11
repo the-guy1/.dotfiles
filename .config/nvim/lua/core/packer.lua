@@ -68,6 +68,9 @@ return require('packer').startup(function(use)
     -- Show indents
     use'lukas-reineke/indent-blankline.nvim'
 
+    -- vim be good to get better at vim
+    use 'ThePrimeagen/vim-be-good'
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
