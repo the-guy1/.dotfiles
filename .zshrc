@@ -190,7 +190,7 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 
 ## Chage defult editor
 export EDITOR='nvim'
-export VISUAL='emacs'
+export VISUAL='nvim'
 
 ### ALIASES ###
 
@@ -236,6 +236,7 @@ alias rm='rm -i'
 alias merge='xrdb -merge ~/.Xresources'
 
 alias life="echo 'Is this real life?' | cowsay -n | cowsay -n | cowsay -n | cowsay -n | lolcat"
+alias sl="sl -a"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
