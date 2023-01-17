@@ -200,10 +200,8 @@ alias vim="nvim"
 alias v="/bin/vim"
 alias cat='bat -p'
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias ls='exa -aG --color=always --icons --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
 alias l.='exa -a | egrep "^\."'
 
 # emacs yes I am trying emacs
@@ -237,6 +235,9 @@ alias merge='xrdb -merge ~/.Xresources'
 
 alias life="echo 'Is this real life?' | cowsay -n | cowsay -n | cowsay -n | cowsay -n | lolcat"
 alias sl="sl -a"
+
+# copy output into clipboard
+alias copy="xclip -sel clipboard"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
