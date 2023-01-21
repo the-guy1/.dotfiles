@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
     }
     -- my themes
     use 'folke/tokyonight.nvim'
+    use { 'dracula/vim', as = 'dracula' }
+    use { "catppuccin/nvim", as = "catppuccin" }
+    use 'arcticicestudio/nord-vim'
 
     use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
     use('nvim-treesitter/playground')
