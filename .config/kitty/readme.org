@@ -1,0 +1,9 @@
+#+title: Kitty readme
+#+AUTHOR: Kenneth Lawson
+#+STARTUP: showeverything
+
+* Table of Contents :toc:
+- [[#description][Description]]
+
+* Description
+This is my config for the [[https://sw.kovidgoyal.net/kitty/][Kitty Terminal]] which I keep around in case Alacritty breaks again
