@@ -7,7 +7,9 @@
 * Table of Contents :toc:
 - [[#config][Config]]
   - [[#display][Display]]
-  - [[#temp][temp]]
+  - [[#config-options][Config options]]
+  - [[#colors][Colors]]
+  - [[#system-configs][System configs]]
 
 * Config
 This is the readme file for my neofetch based off of [[/github.com/chick2d/neofetch-themes][Chick's]] config and [[https://github.com/dylanaraps/neofetch/wiki/Customizing-Info][neofetch wiki]]
@@ -52,8 +54,10 @@ print_info() {
     info cols
 prin "\n \n \n \n \n ${cl3} \n \n ${cl5} \n \n ${cl2} \n \n ${cl6}  \n \n ${cl4}  \n \n ${cl1}  \n \n ${cl7}  \n \n ${cl0}"
 }
+
 #+end_src
-** temp
+** Config options
+These are some of the customization's that changes how some of the information is displayed
 #+begin_src conf
 kernel_shorthand="off"
 distro_shorthand="off"
@@ -89,6 +93,10 @@ separator="  "
 color_blocks="off"
 block_range=(0 15) # Colorblocks
 
+#+end_src
+** Colors
+This Will allow you to see what system theme colors that I am using
+#+begin_src conf
 # Colors for custom colorblocks
 magenta="\033[1;35m"
 green="\033[1;32m"
@@ -113,6 +121,10 @@ cl8="${black}"
 cl9="${bgyellow}"
 cl10="${bgwhite}"
 
+#+end_src
+** System configs
+These are the configs for the terminal emulator as well for making sure the program sisplays properly
+#+begin_src conf
 block_width=4
 block_height=1
 
