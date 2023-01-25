@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
     -- my themes
     use 'folke/tokyonight.nvim'
     use { 'dracula/vim', as = 'dracula' }
@@ -31,6 +32,8 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+
+    use'folke/which-key.nvim'
 
     -- Spelling
     use 'lewis6991/spellsitter.nvim'
@@ -74,6 +77,8 @@ return require('packer').startup(function(use)
     -- vim be good to get better at vim
     use 'ThePrimeagen/vim-be-good'
 
+    -- Startpage
+    use 'mhinz/vim-startify'
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

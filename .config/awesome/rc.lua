@@ -571,7 +571,7 @@ autorunApps =
         "/usr/bin/emacs --daemon",
         "nm-applet",
         "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
-        "feh --bg-scale ~/.dotfiles/.config/tokyonight.svg",
+        -- "feh --bg-scale ~/.dotfiles/.config/tokyonight.svg",
         "xfce4-power-manager",
         "pamac-tray",
         "blueman-applet",
