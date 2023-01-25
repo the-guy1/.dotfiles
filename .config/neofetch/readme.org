@@ -5,21 +5,17 @@
 #+startup: showeverything
 
 * Table of Contents :toc:
-- [[#readme][readme]]
+- [[#config][Config]]
+  - [[#display][Display]]
   - [[#temp][temp]]
 
-* readme
+* Config
 This is the readme file for my neofetch based off of [[/github.com/chick2d/neofetch-themes][Chick's]] config and [[https://github.com/dylanaraps/neofetch/wiki/Customizing-Info][neofetch wiki]]
+I don't use neofetch however I do enjoy having it on my computer.
 
-** temp
+** Display
+This part shows what will end up getting displayed in the Terminal
 #+begin_src conf
-# Source: https://github.com/chick2d/neofetch-themes
-# Configuration made by Chick
-
-# See this wiki page for more info:
-# https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
-
-# I used custom seperators as the older one looked not very properly proportioned
 
 print_info() {
     prin "┌─────────\n Hardware Information \n─────────┐"
@@ -44,7 +40,7 @@ print_info() {
     info " ​ ​   " theme
     info " ​ ​   " icons
     info " ​ ​  " packages
-#    info " ​ ​ 祥  " uptime
+    info " ​ ​ 祥  " uptime
 #    info " ​ ​   " gpu_driver  # Linux/macOS only
 #    info " ​ ​  " cpu_usage
 #    info " ​ ​ ﱘ " song
@@ -56,7 +52,9 @@ print_info() {
     info cols
 prin "\n \n \n \n \n ${cl3} \n \n ${cl5} \n \n ${cl2} \n \n ${cl6}  \n \n ${cl4}  \n \n ${cl1}  \n \n ${cl7}  \n \n ${cl0}"
 }
-
+#+end_src
+** temp
+#+begin_src conf
 kernel_shorthand="off"
 distro_shorthand="off"
 os_arch="off"
