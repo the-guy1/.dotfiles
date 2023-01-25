@@ -16,8 +16,9 @@
 I do want to redo this config sometime this is a fairly poorly mishmash of a handful of other configs.
 I would like to know more haskell first though because this Window Manager needs to have a bit more programming knowledge behind it.
 * Screen shots
-
-* Imports
+* My config
+This is a work in progress
+** Imports
 These are the Haskell modules that XMonad needs
 #+begin_src haskell
   -- Base
@@ -91,7 +92,7 @@ import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 #+end_src
 
-* Variables
+** Variables
 variables that will be used for the rest of the configuration file
 #+begin_src haskell
 myFont :: String
@@ -116,7 +117,7 @@ myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
 myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows
 #+end_src
-
+** Autorun programs
 #+begin_src haskell
 myStartupHook :: X ()
 myStartupHook = do
@@ -140,7 +141,7 @@ myStartupHook = do
 #+end_src
 
 
-* KeyBindings
+** KeyBindings
 these are my keybindings
 #+begin_src haskell
 myKeys :: XConfig l0 -> [((KeyMask, KeySym), NamedAction)]
@@ -243,7 +244,7 @@ myKeys c =
 
 #+end_src
 
-* MAIN
+** MAIN
 This is were all of this code actually gets ran
 #+begin_src haskell
 main :: IO ()
