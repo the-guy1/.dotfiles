@@ -13,24 +13,13 @@
 - [[#main][MAIN]]
 
 * About Config
-
+I do want to redo this config sometime this is a fairly poorly mishmash of a handful of other configs.
+I would like to know more haskell first though because this Window Manager needs to have a bit more programming knowledge behind it.
 * Screen shots
 
 * Imports
 These are the Haskell modules that XMonad needs
 #+begin_src haskell
--- -- Base
--- import XMonad
--- import System.Directory
--- import System.IO (hClose, hPutStr, hPutStrLn)
--- import System.Exit (exitSuccess)
--- import qualified XMonad.StackSet as W
---
--- --Utils
--- import XMonad.Util.SpawnOnce
--- import XMonad.Util.EZConfig (additionalKeysP, mkNamedKeymap)
--- import XMonad.Util.NamedActions
-
   -- Base
 import XMonad
 import System.Directory
