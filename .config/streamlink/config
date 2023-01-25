@@ -1,3 +1,0 @@
-player=mpv --cache=yes
-title="{author} - {title}"
-player-no-close
