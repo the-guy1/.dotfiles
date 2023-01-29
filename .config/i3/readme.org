@@ -414,7 +414,6 @@ These are the applications that will automatically launch
 exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec --no-startup-id nitrogen --restore; sleep 1
 exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/tokyo-night36.svg
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -438,18 +437,6 @@ exec --no-startup-id autotiling
 ** Color scheme for the i3terminal
 I may not use the i3 terminal but I like having it
 #+begin_src conf
-# Color palette used for the terminal ( ~/.Xresources file )
-# Colors are gathered based on the documentation:
-# https://i3wm.org/docs/userguide.html#xresources
-# Change the variable name at the place you want to match the color
-# of your terminal like this:
-# [example]
-# If you want your bar to have the same background color as your
-# terminal background change the line 362 from:
-# background #14191D
-# to:
-# background $term_background
-# Same logic applied to everything else.
 set_from_resource $term_background background
 set_from_resource $term_foreground foreground
 set_from_resource $term_color0     color0
@@ -484,8 +471,8 @@ The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] co
 #+end_src
 *** default config
 This is the base i3bar config
+This is in case I decide to use this again
 #+begin_src conf
-
 # # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # bar {
 # 	i3bar_command i3bar
@@ -526,20 +513,12 @@ This is the base i3bar config
 #     binding_mode       #FF5555 #FF5555 #F8F8F2
 #   }
 # }
+
 #+end_src
 
 ** Theme
 This is the [[https://draculatheme.com/i3][Dracula theme]]
 #+begin_src conf
-# Theme colors
-# class                   border  backgr. text    indic.   child_border
-#  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-#  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-#  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-#  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-#  client.placeholder      #000000 #0c0c0c #ffffff #000000
-
-#  client.background       #2B2C2B
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
@@ -551,7 +530,7 @@ client.background       #F8F8F2
 
 #+end_src
 ** gaps
-
+For using gaps to help to separate windows
 #+begin_src conf
 #############################
 ### settings for i3-gaps: ###
