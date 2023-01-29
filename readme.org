@@ -9,7 +9,7 @@ This is my dot files
 
 ---
 [[./.config/screenshot.png]]
-I use [[https://www.gnu.org/software/stow/][stow]]  to create symlinks with the actual config files.
+I use [[https://www.gnu.org/software/stow/][stow]] to create symlinks with the actual config files.
 
 These are here mainly so if I need to reinstall my operating system or my entire computer. I do not really believe that anyone other than me would actually use these.
 
@@ -37,4 +37,6 @@ These are here mainly so if I need to reinstall my operating system or my entire
 - reddhift
   for adjusting bluelight during the evenings
 - betterlockscreen
+  This is my lock screen its relatively small while showing more information than most tiny lockscreens
 - picom
+  This program will allow some programs to be partially transparent and is purely a cosmetic program.
