@@ -64,15 +64,15 @@ scrolling:
 
 font:
   normal:
-    family: Mononoki Nerd Font
+    family: Hack Nerd Font
   bold:
-    family: Mononoki Nerd Font
+    family: Hack Nerd Font
     style: Bold
   italic:
-    family: Mononoki Nerd Font
+    family: Hack Nerd Font
     style: Italic
   bold_italic:
-    family: Mononoki Nerd Font
+    family: Hack Nerd Font
     style: Bold Italic
 
   # Point size
