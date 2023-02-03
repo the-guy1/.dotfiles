@@ -15,28 +15,36 @@ These are here mainly so if I need to reinstall my operating system or my entire
 
 ---
 * These are my files
-- Xresources
-- zsh
-- xmonad & xmobar
-    I don't use xmonad but I might want to at some time
-- paru
-    My AUR helper
-- i3
-    This is my actual Window manager
-- alacritty
-- awesome bspwm and qtile
-    these are Window managers that I want to try sometime
-- dunst
-- neofetch
-- neovim
-  I mainly use emacs but I still like to maintain and occasionally use neovim. Mainly when I am already in the terminal so I can still remember all of the shortcuts because vi/vim/neovim is on most linux computers as well as OSX and sooner or latter you might need to use it.
-- ranger
-  my terminal based file manager
-- sxhkd
-  keyboard shortcuts for bspwm
-- reddhift
-  for adjusting bluelight during the evenings
-- betterlockscreen
-  This is my lock screen its relatively small while showing more information than most tiny lockscreens
-- picom
+** Xresources
+This is for more of my system can use the Dracula theme
+** zsh
+I like this shell because it feels like a better version of BASH which is showing it age zsh is still a bit old though
+** paru
+My AUR helper
+** Window Managers
+*** i3
+This is my actual Window manager
+*** alacritty
+This is a basic extremely customizable terminal emulator
+*** awesomewm
+This is fun tiling Window manager that uses the lua programming language
+*** bspwm
+This is a small Tiling window manager that uses a bash script as a config file
+**** sxhkd
+bspwm doesn't have keyboard shortcuts built in so you have to use an external program like sxhdk
+** qtile
+This is a Window Manager that is written in python
+** dunst
+A notification system
+** neofetch
+shows PC information
+** neovim
+I mainly use emacs but I still like to maintain and occasionally use neovim. Mainly when I am already in the terminal so I can still remember all of the shortcuts because vi/vim/neovim is on most linux computers as well as OSX and sooner or latter you might need to use it.
+** ranger
+This is an older but still well maintained and well enjoyed terminal file manager
+** reddhift
+ for adjusting bluelight during the evenings
+** betterlockscreen
+ This is my lock screen its relatively small while showing more information than most tiny lockscreens
+** picom
   This program will allow some programs to be partially transparent and is purely a cosmetic program.
