@@ -32,7 +32,7 @@ This is fun tiling Window manager that uses the lua programming language
 This is a small Tiling window manager that uses a bash script as a config file
 **** sxhkd
 bspwm doesn't have keyboard shortcuts built in so you have to use an external program like sxhdk
-*** hyperland
+*** hyprland
 wayland
 ** qtile
 This is a Window Manager that is written in python
