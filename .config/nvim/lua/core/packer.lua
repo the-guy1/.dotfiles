@@ -77,6 +77,9 @@ return require('packer').startup(function(use)
     -- vim be good to get better at vim
     use 'ThePrimeagen/vim-be-good'
 
+    -- Intergrate tmux and neovim
+    use 'christoomey/vim-tmux-navigator'
+
     -- Startpage
     use 'mhinz/vim-startify'
     -- Automatically set up your configuration after cloning packer.nvim
