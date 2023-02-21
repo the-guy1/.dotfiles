@@ -312,7 +312,7 @@ set_from_resource $term_color15    color15
 
  bar {
  	status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
- 		pasink -p time.format="%H:%M" -t greyish-powerline #dracula-powerline
+ 		pasink -p time.format="%H:%M" -t dracula-powerline #greyish-powerline
  #        position top
  }
 
