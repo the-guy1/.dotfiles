@@ -273,7 +273,7 @@ for_window [urgent=latest] focus
 exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/tokyo-night36.svg
+exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/SynthwavePlanet.jpg
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
