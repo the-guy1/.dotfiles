@@ -8,7 +8,8 @@ lsp.ensure_installed({
   'gopls',
   'tsserver',
   'eslint',
-  'sumneko_lua',
+  'lua_ls',
+  -- 'sumneko_lua',
   'rust_analyzer',
 })
 
