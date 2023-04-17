@@ -459,13 +459,6 @@ set_from_resource $term_color15    color15
 #+end_src
 
 ** bar
-*** i3Blocks
-I am using this minimalist style bar for its simple look
-#+begin_src conf
-# bar {
-    # status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
-    # }
-#+end_src
 *** bumblebee
 The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] I use the AUR config is what I use for my bar
 #+begin_src conf
@@ -493,10 +486,6 @@ client.background       #F8F8F2
 ** gaps
 For using gaps to help to separate windows
 #+begin_src conf
-#############################
-### settings for i3-gaps: ###
-#############################
-
 # Set inner/outer gaps
 gaps inner 14
 gaps outer -2
