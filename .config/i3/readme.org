@@ -60,7 +60,7 @@ new_window none
 ** Font
 This set the main font that gets used for i3 and its bar
 #+begin_src conf
-font xft:Mononoki Nerd Font 9
+font xft:Hack Nerd Font 10
 
 #+end_src
 
