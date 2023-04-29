@@ -14,9 +14,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH="/home/ken/.oh-my-zsh"
 export TERM="xterm-256color"                      # getting proper colors
 
-### "nvim" as manpager
-# export MANPAGER="nvim -c 'set ft=man' -"
-
 ### CHANGE TITLE OF TERMINALS
 case ${TERM} in
   xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
@@ -102,6 +99,7 @@ alias doas="doas --"
 alias vim="nvim"
 alias v="/bin/vim"
 alias cat="bat"
+alias man="batman"
 # Changing "ls" to "exa"
 alias ls='exa -aG --color=always --icons --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
