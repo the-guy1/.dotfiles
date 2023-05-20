@@ -63,19 +63,30 @@ bspc rule -a Screenkey manage=off
 ** Colors
 These are the color that bspwm uses
 #+begin_src sh
-bspc config normal_border_color "#44475a"
-bspc config active_border_color "#bd93f9"
-bspc config focused_border_color "#ff79c6"
-bspc config presel_feedback_color "#6272a4"
-bspc config normal_border_color "#44475a"
+# bspc config normal_border_color "#44475a"
 # bspc config active_border_color "#bd93f9"
 # bspc config focused_border_color "#ff79c6"
-bspc config presel_feedback_color "#6272a4"
-bspc config active_border_color "#6272a4"
-bspc config focused_border_color "#8be9fd"
+# bspc config presel_feedback_color "#6272a4"
+# bspc config normal_border_color "#44475a"
+# # bspc config active_border_color "#bd93f9"
+# # bspc config focused_border_color "#ff79c6"
+# bspc config presel_feedback_color "#6272a4"
+# bspc config active_border_color "#6272a4"
+# bspc config focused_border_color "#8be9fd"
+
+# source the colors.
+. "${HOME}/.cache/wal/colors.sh"
+
+# Set the border colors.
+bspc config normal_border_color "$color1"
+bspc config active_border_color "$color2"
+bspc config focused_border_color "$color15"
+# Use the line below if you are on bspwm >= 0.9.4
+bspc config presel_feedback_color "$color1"
+# Use the line below if you are on bspwm < 0.9.4
+#bspc config presel_border_color "$color1"
 
 #+end_src
-
 
 ** Auto run
 My autorun programs
@@ -83,7 +94,8 @@ My autorun programs
 /usr/bin/emacs --daemon &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # nitrogen --restore &
-feh --bg-scale ~/.dotfiles/.config/wallpaper/SynthwavePlanet.jpg &
+# feh --bg-scale ~/.dotfiles/.config/wallpaper/SynthwavePlanet.jpg &
+wal -i .config/wallpaper/Mountain-Palm-Trees.jpg &
 picom &
 dunst &
 blueman-applet &

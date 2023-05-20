@@ -274,12 +274,14 @@ for_window [urgent=latest] focus
 exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/SynthwavePlanet.jpg
+# exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/SynthwavePlanet.jpg
+exec --no-startup-id wal -i .config/wallpaper/Mountain-Palm-Trees.jpg
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
 exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l"
+exec --no-startup-id ~/.config/polybar/lauch.sh
 
 exec --no-startup-id /opt/piavpn/bin/pia-client
 exec --no-startup-id dropbox
