@@ -465,11 +465,11 @@ set_from_resource $term_color15    color15
 *** bumblebee
 The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] I use the AUR config is what I use for my bar
 #+begin_src conf
-bar {
-    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
-    pasink -p time.format="%H:%M" -t iceberg-contrast #dracula-powerline #greyish-powerline
-#   position top
-}
+# bar {
+#     status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
+#     pasink -p time.format="%H:%M" -t iceberg-contrast #dracula-powerline #greyish-powerline
+# #   position top
+# }
 
 #+end_src
 

@@ -313,11 +313,11 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-bar {
-    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
-    pasink -p time.format="%H:%M" -t iceberg-contrast #dracula-powerline #greyish-powerline
-#   position top
-}
+# bar {
+#     status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
+#     pasink -p time.format="%H:%M" -t iceberg-contrast #dracula-powerline #greyish-powerline
+# #   position top
+# }
 
 # class                 border  bground text    indicator child_border
 # client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
