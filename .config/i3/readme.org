@@ -422,7 +422,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
 exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l"
-exec --no-startup-id /home/ken/.config/polybar/launch.sh
+# exec --no-startup-id /home/ken/.config/polybar/launch.sh
 
 exec --no-startup-id /opt/piavpn/bin/pia-client
 exec --no-startup-id dropbox
@@ -465,11 +465,11 @@ set_from_resource $term_color15    color15
 *** bumblebee
 The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] I use the AUR config is what I use for my bar
 #+begin_src conf
-# bar {
-#     status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory playerctl battery datetime \
-#     pasink -p time.format="%H:%M" -t iceberg-contrast #dracula-powerline #greyish-powerline
-# #   position top
-# }
+bar {
+    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory spotify battery datetime system \
+    pasink -p time.format="%H:%M" -t iceberg-dark-powerline #dracula-powerline #greyish-powerline
+#   position top
+}
 
 #+end_src
 
