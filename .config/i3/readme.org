@@ -408,7 +408,7 @@ These are the applications that will automatically launch
 #+begin_src conf
 # Autostart applications
 
-# This is fore when I have my external monitor attached
+# This is for when I have my external monitor attached
 # exec --no-startup-id .screenlayout/ExtMonRight.sh
 
 # emacs daemon
