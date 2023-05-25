@@ -33,7 +33,12 @@ This is to import external configuration files that are used in alacritty
 # to the user's home directory starting with `~/`.
 import:
 #  - /path/to/alacritty.yml
-  - ~/.config/alacritty/dracula.yml
+# - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+
 #+end_src
 
 ** Env + Term
