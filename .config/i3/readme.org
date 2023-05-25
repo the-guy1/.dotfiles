@@ -16,7 +16,6 @@
   - [[#brightness-controls][Brightness controls]]
   - [[#setup-workspaces-and-to-name-them][setup Workspaces and to name them]]
   - [[#startup-applications][Startup Applications]]
-  - [[#color-scheme-for-the-i3terminal][Color scheme for the i3terminal]]
   - [[#bar][bar]]
   - [[#theme][Theme]]
   - [[#gaps][gaps]]
@@ -415,7 +414,7 @@ These are the applications that will automatically launch
 exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/catppuccin.png
+exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/DarkWall.jpg
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
