@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "catppuccin"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -173,7 +173,7 @@ lvim.plugins = {
   --       cmd = "TroubleToggle",
   --     },
   { "catppuccin/nvim", as = "catppuccin" },
-  { "dracula/vim", as = "dracula" },
+  { "dracula/vim",     as = "dracula" },
   "xiyaowong/nvim-transparent"
 }
 
@@ -182,7 +182,7 @@ vim.wo.relativenumber = true
 
 -- enable transparency
 require("transparent").setup({
-  enable = true, -- boolean: enable transparent
+  enable = true,   -- boolean: enable transparent
   extra_groups = { -- table/string: additional groups that should be cleared
     -- In particular, when you set it to 'all', that means all available groups
 

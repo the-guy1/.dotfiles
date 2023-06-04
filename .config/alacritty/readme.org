@@ -125,15 +125,15 @@ This is arguably the most important part of a terminal becasue of how long you s
 #+begin_src yaml
 font:
   normal:
-    family: Mononoki Nerd Font
+    family: FiraCode Nerd Font
   bold:
-    family: Mononoki Nerd Font
+    family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: Mononoki Nerd Font
+    family: FiraCode Nerd Font
     style: Italic
   bold_italic:
-    family: Mononoki Nerd Font
+    family: FiraCode Nerd Font
     style: Bold Italic
 
   # Point size

@@ -68,15 +68,15 @@ scrolling:
 
 font:
   normal:
-    family: Mononoki Nerd Font
+    family: FiraCode Nerd Font
   bold:
-    family: Mononoki Nerd Font
+    family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: Mononoki Nerd Font
+    family: FiraCode Nerd Font
     style: Italic
   bold_italic:
-    family: Mononoki Nerd Font
+    family: FiraCode Nerd Font
     style: Bold Italic
 
   # Point size

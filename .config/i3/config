@@ -18,7 +18,7 @@ bindsym $mod+n border normal
 
 new_window none
 
-font xft:JetBrainsMono Nerd Font 10
+font xft: FiraCode Nerd Font 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -274,7 +274,7 @@ for_window [urgent=latest] focus
 exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/catppuccin.png
+exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/DarkWall.jpg
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
@@ -294,7 +294,7 @@ exec --no-startup-id solaar -w hide
 exec --no-startup-id autotiling
 
 bar {
-    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory spotify battery datetime system \
+    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory spotify battery datetime \
     pasink -p time.format="%H:%M" -t iceberg-dark-powerline #dracula-powerline #greyish-powerline
 #   position top
 }
