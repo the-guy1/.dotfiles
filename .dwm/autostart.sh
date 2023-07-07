@@ -1,7 +1,7 @@
 /usr/bin/emacs --daemon &
 nm-applet &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-feh --bg-scale ~/.dotfiles/.config/wallpaper/SynthwavePlanet.jpg &
+feh --bg-scale ~/.dotfiles/.config/wallpaper/DarkWall.jpg &
 xfce-power-manager &
 pamac-tray &
 clipit &
