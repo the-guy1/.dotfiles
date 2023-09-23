@@ -59,7 +59,7 @@ new_window none
 ** Font
 This set the main font that gets used for i3 and its bar
 #+begin_src conf
-font xft: Hack Nerd Font 11
+font xft: Mononoki Nerd Font 10
 
 #+end_src
 
@@ -446,8 +446,8 @@ exec --no-startup-id autotiling
 The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] I use the AUR config is what I use for my bar
 #+begin_src conf
 bar {
-    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory spotify battery datetime \
-    pasink -p time.format="%H:%M" -t iceberg-contrast #greyish-powerline
+    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory spotify arch-update aur-update battery datetime \
+    pasink -p time.format="%H:%M" -t iceberg
 #   position top
 }
 
