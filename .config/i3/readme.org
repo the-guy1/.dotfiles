@@ -59,7 +59,7 @@ new_window none
 ** Font
 This set the main font that gets used for i3 and its bar
 #+begin_src conf
-font xft: Mononoki Nerd Font 10
+font xft: Hack Nerd Font 10
 
 #+end_src
 
@@ -420,7 +420,7 @@ These are the applications that will automatically launch
 exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/watercolor.jpg
+exec --no-startup-id feh --bg-scale ~/.dotfiles/.config/wallpaper/lightpurple.jpg
 exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
