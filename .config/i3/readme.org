@@ -412,11 +412,6 @@ for_window [urgent=latest] focus
 These are the applications that will automatically launch
 #+begin_src conf
 # Autostart applications
-
-# This is for when I have my external monitor attached
-# exec --no-startup-id .screenlayout/ExtMonRight.sh
-
-# emacs daemon
 exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
