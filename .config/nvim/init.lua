@@ -17,6 +17,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.o.scrolloff = 12
+
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
 --

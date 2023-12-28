@@ -21,9 +21,9 @@
   - [[#gaps][gaps]]
 
 * Description
-This is my i3 file I which is a Window Manager that I enjoy. Its customisable while being sturdy.
+This is my i3 file I which is a Window Manager that I enjoy. Its customizable while being sturdy.
 * Screenshots
-
+I should add some
 * Configuration Files
 
 ** Setting mod key
@@ -85,7 +85,6 @@ To close the active application
 bindsym $mod+Shift+q kill
 #+end_src
 *** Launchers
-
 **** Dmenu
 open my menu
 #+begin_src conf
@@ -191,10 +190,11 @@ Smaller shortcuts that I don't use that often but are glad that they are there
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
+bindsym $mod+Shift+f exec thunar
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
+# bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
@@ -440,8 +440,8 @@ exec --no-startup-id autotiling
 The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] I use the AUR config is what I use for my bar
 #+begin_src conf
 bar {
-    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory spotify arch-update aur-update battery datetime \
-    pasink -p time.format="%H:%M" -t iceberg
+    status_command /usr/share/bumblebee-status/bumblebee-status  -m cpu memory spotify time battery \
+    pasink  -t iceberg # -p
 #   position top
 }
 

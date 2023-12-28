@@ -98,10 +98,11 @@ bindsym $mod+Ctrl+Left workspace prev
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
+bindsym $mod+Shift+f exec thunar
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
+# bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
@@ -269,11 +270,6 @@ assign [class="Steam"] 6
 for_window [urgent=latest] focus
 
 # Autostart applications
-
-# This is for when I have my external monitor attached
-# exec --no-startup-id .screenlayout/ExtMonRight.sh
-
-# emacs daemon
 exec --no-startup-id /usr/bin/emacs --daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -296,8 +292,8 @@ exec --no-startup-id solaar -w hide
 exec --no-startup-id autotiling
 
 bar {
-    status_command /usr/share/bumblebee-status/bumblebee-status -m cpu memory spotify arch-update aur-update battery datetime \
-    pasink -p time.format="%H:%M" -t iceberg
+    status_command /usr/share/bumblebee-status/bumblebee-status  -m cpu memory spotify time battery \
+    pasink  -t iceberg # -p
 #   position top
 }
 
