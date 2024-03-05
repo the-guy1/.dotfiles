@@ -59,7 +59,7 @@ new_window none
 ** Font
 This set the main font that gets used for i3 and its bar
 #+begin_src conf
-font xft: Hack Nerd Font 10
+font xft: ProggyClean Nerd Font 9 
 
 #+end_src
 
@@ -76,7 +76,7 @@ floating_modifier $mod
 Set my terminal
 #+begin_src conf
 # start my terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec wezterm
 #+end_src
 *** Kill the Window
 To close the active application
@@ -441,7 +441,7 @@ The [[https://github.com/tobi-wan-kenobi/bumblebee-status][bumblebee-status]] I 
 #+begin_src conf
 bar {
     status_command /usr/share/bumblebee-status/bumblebee-status  -m cpu memory spotify time battery \
-    pasink  -t iceberg # -p
+    pasink  -t dracula-powerline #iceberg # -p
 #   position top
 }
 
