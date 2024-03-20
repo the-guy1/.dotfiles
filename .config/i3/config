@@ -18,13 +18,13 @@ bindsym $mod+n border normal
 
 new_window none
 
-font xft: ProggyClean Nerd Font 9
+font xft: Hack Nerd Font 9
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
 # start my terminal
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -293,7 +293,7 @@ exec --no-startup-id autotiling
 
 bar {
     status_command /usr/share/bumblebee-status/bumblebee-status  -m cpu memory spotify time battery \
-    pasink  -t dracula-powerline #iceberg # -p
+    pasink  -t iceberg #dracula-powerline # -p
 #   position top
 }
 
